@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import ShowCase from "./components/ShowCase/ShowCase";
+import { GlobalStyle } from "./GlobalStyle";
+import { caseOne, caseTwo,  caseThree, caseFour } from "./components/ShowCase/data";
+import ShowCaseLst from "./components/ShowCase/ShowCaseLst";
+import Question from "./components/Question/Questions";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle/>
+      <Header />
+      <ShowCase {...caseOne}/>
+      <ShowCase {...caseTwo}/>
+      <ShowCase {...caseThree}/>
+      <ShowCaseLst {...caseFour} />
+      <Question />
+      <Footer />
+    </>
   );
 }
 
+
 export default App;
+
+
